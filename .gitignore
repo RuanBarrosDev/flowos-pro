@@ -1,0 +1,29 @@
+# Memória do negócio (criada pelo /instalar — privada, não versionar)
+_memoria/negocio.md
+
+# Configs individuais dos agentes (dados do seu negócio)
+.balcao/
+.fisga/
+.farol/
+.leme/
+.escriba/
+.pauta/
+.holofote/
+.vitrine/
+.aplauso/
+.escuta/
+.alavanca/
+.forja/
+.trilha/
+.engrenagem/
+.orquestra/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node / Python
+node_modules/
+__pycache__/
+*.pyc
+.env
