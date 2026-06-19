@@ -17,7 +17,7 @@ Dois caminhos. Escolhe o que combina contigo.
 Abre o Claude Code em qualquer pasta e cola o prompt abaixo:
 
 ```
-Clona o https://github.com/flowzera/flowos-pro.git na pasta atual, entra nela e roda o /instalar.
+Clona o https://github.com/RuanBarrosDev/flowos-pro.git na pasta atual, entra nela e roda o /instalar.
 ```
 
 Ele clona, entra na pasta e dispara a entrevista de setup. Você só responde.
@@ -27,7 +27,7 @@ Ele clona, entra na pasta e dispara a entrevista de setup. Você só responde.
 Cola estes comandos no terminal, um por vez:
 
 ```bash
-git clone https://github.com/flowzera/flowos-pro.git
+git clone https://github.com/RuanBarrosDev/flowos-pro.git
 cd flowos-pro
 code .
 ```

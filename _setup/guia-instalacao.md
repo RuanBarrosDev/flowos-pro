@@ -61,13 +61,13 @@ Deve aparecer um número de versão.
 
 **Opção A — Terminal (recomendado):**
 ```bash
-git clone https://github.com/flowzera/flowos-pro.git
+git clone https://github.com/RuanBarrosDev/flowos-pro.git
 cd flowos-pro
 code .
 ```
 
 **Opção B — Download direto:**
-1. Acessa [github.com/flowzera/flowos-pro](https://github.com/flowzera/flowos-pro)
+1. Acessa [github.com/flowzera/flowos-pro](https://github.com/RuanBarrosDev/flowos-pro)
 2. Clica em "Code" → "Download ZIP"
 3. Extrai a pasta
 4. Abre o VS Code e vai em "File → Open Folder" → seleciona a pasta extraída
