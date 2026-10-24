@@ -1,0 +1,50 @@
+{
+  "projeto": "Agenda de atendimentos (clínica/salão/consultório)",
+  "engine": "sqlite",
+  "tabelas": [
+    {
+      "nome": "profissionais",
+      "descricao": "Quem atende (médico, dentista, cabeleireiro, terapeuta)",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "nome", "tipo": "texto", "nn": true, "descricao": "nome do profissional"},
+        {"nome": "especialidade", "tipo": "texto", "descricao": "área de atuação"},
+        {"nome": "ativo", "tipo": "booleano", "nn": true, "default": 1, "descricao": "ainda atende?"}
+      ]
+    },
+    {
+      "nome": "pacientes",
+      "descricao": "Quem é atendido (paciente/cliente)",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "nome", "tipo": "texto", "nn": true},
+        {"nome": "telefone", "tipo": "texto", "descricao": "para lembrete e confirmação"},
+        {"nome": "nascimento", "tipo": "data", "descricao": "data de nascimento"},
+        {"nome": "criado_em", "tipo": "datahora", "nn": true, "default": "agora"}
+      ]
+    },
+    {
+      "nome": "servicos",
+      "descricao": "O que pode ser marcado (consulta, limpeza, corte, avaliação)",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "nome", "tipo": "texto", "nn": true, "descricao": "nome do serviço"},
+        {"nome": "duracao_min", "tipo": "numero", "nn": true, "descricao": "quanto dura, em minutos"},
+        {"nome": "preco", "tipo": "dinheiro", "nn": true, "descricao": "valor cobrado"}
+      ]
+    },
+    {
+      "nome": "agendamentos",
+      "descricao": "Cada horário marcado: junta paciente, profissional e serviço",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "paciente_id", "tipo": "ref", "ref": "pacientes.id", "nn": true, "rotulo": "marca"},
+        {"nome": "profissional_id", "tipo": "ref", "ref": "profissionais.id", "nn": true, "rotulo": "atende"},
+        {"nome": "servico_id", "tipo": "ref", "ref": "servicos.id", "nn": true, "rotulo": "é de"},
+        {"nome": "inicio", "tipo": "datahora", "nn": true, "descricao": "data e hora do atendimento"},
+        {"nome": "situacao", "tipo": "opcao", "opcoes": ["marcado", "confirmado", "realizado", "faltou", "cancelado"], "nn": true, "default": "marcado", "descricao": "estado do horário"},
+        {"nome": "observacao", "tipo": "texto_longo", "descricao": "anotações do atendimento"}
+      ]
+    }
+  ]
+}

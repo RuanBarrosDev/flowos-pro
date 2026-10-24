@@ -1,0 +1,47 @@
+{
+  "projeto": "Escola / plataforma de cursos",
+  "engine": "sqlite",
+  "tabelas": [
+    {
+      "nome": "alunos",
+      "descricao": "Quem estuda",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "nome", "tipo": "texto", "nn": true},
+        {"nome": "email", "tipo": "texto", "unico": true, "nn": true},
+        {"nome": "criado_em", "tipo": "datahora", "nn": true, "default": "agora"}
+      ]
+    },
+    {
+      "nome": "cursos",
+      "descricao": "Cada curso oferecido",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "titulo", "tipo": "texto", "nn": true, "descricao": "nome do curso"},
+        {"nome": "preco", "tipo": "dinheiro", "nn": true, "descricao": "valor da matrícula"},
+        {"nome": "publicado", "tipo": "booleano", "nn": true, "default": 0, "descricao": "está no ar?"}
+      ]
+    },
+    {
+      "nome": "matriculas",
+      "descricao": "Tabela do meio: qual aluno está em qual curso (muitos-para-muitos entre alunos e cursos)",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "aluno_id", "tipo": "ref", "ref": "alunos.id", "nn": true, "ao_apagar": "cascata", "rotulo": "matricula"},
+        {"nome": "curso_id", "tipo": "ref", "ref": "cursos.id", "nn": true, "rotulo": "no"},
+        {"nome": "situacao", "tipo": "opcao", "opcoes": ["ativa", "concluida", "cancelada"], "nn": true, "default": "ativa", "descricao": "estado da matrícula"},
+        {"nome": "matriculado_em", "tipo": "datahora", "nn": true, "default": "agora"}
+      ]
+    },
+    {
+      "nome": "aulas",
+      "descricao": "Cada aula dentro de um curso",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "curso_id", "tipo": "ref", "ref": "cursos.id", "nn": true, "ao_apagar": "cascata", "rotulo": "tem"},
+        {"nome": "titulo", "tipo": "texto", "nn": true, "descricao": "nome da aula"},
+        {"nome": "ordem", "tipo": "numero", "nn": true, "default": 1, "descricao": "posição da aula no curso"}
+      ]
+    }
+  ]
+}

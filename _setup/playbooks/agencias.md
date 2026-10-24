@@ -1,39 +1,48 @@
-# Playbook FlowOS Pro — Agências e Prestadores de Marketing
+# Playbook FlowOS Pro para Agências e Prestadores de Marketing
 
-**Para:** Agências de tráfego pago, social media, criação, conteúdo, automação e serviços digitais para empresas.
+**Para:** agências de tráfego pago, social media, criação, conteúdo, automação e serviços digitais para empresas.
+
+**Antes de começar:** boa parte deste playbook usa agentes dos pacotes **Clientes** e **Marketing**. Se não ativou no `/instalar`, roda `/pacotes` e liga os dois.
 
 ---
 
 ## Os 3 agentes que mudam o jogo para você primeiro
 
-### 1. Orq. Tráfego — Estrutura de campanha que você apresenta como estrategista, não operador
+### 1. Turbina: estrutura de campanha que você apresenta como estrategista, não como operador
 
-Agência que apresenta estratégia cobra mais e retém cliente mais tempo. O Orq. Tráfego eleva o nível da entrega.
+(pacote Marketing: ative com `/pacotes`)
+
+Agência que apresenta estratégia cobra mais e retém cliente por mais tempo. A Turbina planeja a estrutura da conta, faz a conta da verba e lê os números da campanha para dizer o que pausar, ajustar ou escalar. Ela não mexe na conta: quem executa no Gerenciador é você.
 
 **Estruturando campanha para cliente novo:**
 ```
-/orquestra-trafego estrutura campanha de leads para cliente novo: [tipo de negócio]
+/Turbina estrutura campanha de leads para cliente novo: [tipo de negócio]
 Objetivo: [X leads/mês]
 Verba: R$[valor]/mês
 Público: [cidade/região]
 ```
 
-**Otimização baseada em dados:**
+**Lendo os números da semana:**
 ```
-/orquestra-trafego analisa esses resultados do cliente [nome]: [cola métricas da semana]
-O que priorizar para a próxima semana?
+/Turbina aqui a exportação da semana do cliente [nome]: [cola as métricas]
+O que pausar, o que ajustar e o que escalar?
 ```
 
-**Copy para anúncio:**
+**Decidindo quanto investir:**
 ```
-/orquestra-trafego escreve 3 copies de anúncio para [cliente]. Produto: [X]. Público: [quem]. Objetivo: leads.
+/Turbina o cliente [nome] vende [produto] a R$[X] com margem de [Y]%. Qual o custo por venda máximo e quanto de verba faz sentido para começar?
+```
+
+O texto do anúncio fica com o Escriba:
+```
+/Escriba escreve 3 textos de anúncio para [cliente]. Produto: [X]. Público: [quem]. Objetivo: leads.
 ```
 
 ---
 
-### 2. Vitrine — Relatório que o cliente entende e que justifica o contrato
+### 2. Vitrine: relatório que o cliente entende e que justifica o contrato
 
-Cliente que não entende o relatório eventualmente questiona o valor. O Vitrine cria relatórios que comunicam resultado, não só números.
+Cliente que não entende o relatório uma hora questiona o valor. O Vitrine monta relatórios que comunicam resultado, não só números.
 
 **Relatório mensal:**
 ```
@@ -49,23 +58,27 @@ Compare com mês anterior: [dados anteriores]
 
 ---
 
-### 3. Orq. Propostas — Proposta de onboarding que fecha no primeiro contato
+### 3. Amarra: da reunião de descoberta à proposta que fecha
 
-Agência perde muito prospect no "vou pensar". Uma proposta bem estruturada reduz esse intervalo.
+(pacote Clientes: ative com `/pacotes`)
+
+Agência perde muito prospect no "vou pensar". A Amarra prepara o roteiro da reunião de descoberta, registra a dor do cliente nas palavras dele e monta uma proposta consultiva com 3 opções. Ela não inventa preço: os valores saem de você.
+
+**Antes da reunião:**
+```
+/Amarra tenho reunião de descoberta com [tipo de negócio] na quinta. Monta o roteiro de perguntas.
+```
 
 **Proposta de gestão de tráfego:**
 ```
-/orquestra-propostas monta proposta de gestão de tráfego pago para:
-Cliente: [tipo de negócio]
-Objetivo: [X leads ou R$Y em vendas]
-Escopo: [o que você vai gerenciar]
-Valor: R$[X]/mês
+/Amarra fiz a reunião com [cliente]. O que ele disse: [dor, meta, prazo, quem decide].
+Monta a proposta de gestão de tráfego com 3 opções.
+Meus preços: [valor de cada opção]
 ```
 
-**Proposta de pacote completo:**
+**Quando o prospect trava:**
 ```
-/orquestra-propostas monta proposta de tráfego + social media + automação para [cliente]
-Valor total: R$[X]/mês
+/Amarra mandei a proposta de tráfego + social media para [cliente] e ele disse "vou pensar". Como respondo?
 ```
 
 ---
@@ -75,11 +88,16 @@ Valor total: R$[X]/mês
 | Frequência | Agente | Tarefa |
 |-----------|--------|--------|
 | Todo dia | Leme | Prioridades entre clientes (urgências, entregas) |
-| Toda semana | Orq. Tráfego | Análise e otimização de campanhas dos clientes |
-| Toda semana | Orq. Conteúdo | Conteúdo para redes sociais dos clientes |
+| Toda semana | Turbina | Leitura dos números e ajustes nas campanhas dos clientes |
+| Toda semana | Holofote + Escriba | Calendário e posts para as redes dos clientes |
 | Quinzenal | Vitrine | Relatório de resultados para cada cliente |
-| Por demanda | Orq. Propostas | Toda proposta nova ou renovação |
+| Por demanda | Amarra | Toda proposta nova ou renovação |
+| Por demanda | Cais | Todo cliente novo que fechar |
+| Mensal | Âncora | Saúde da carteira e quem está em risco de cancelar |
+| Mensal | Régua | Quem está devendo e a cobrança no tom certo |
 | Mensal | Farol | Análise de margem por cliente e do negócio como um todo |
+
+Cais, Âncora e Régua ficam no pacote Clientes (ative com `/pacotes`).
 
 ---
 
@@ -87,12 +105,17 @@ Valor total: R$[X]/mês
 
 **Cliente insatisfeito com resultado:**
 ```
-/Escuta o cliente [nome] reclamou dos resultados dessa semana. O que disse: [resume a conversa]. Como respondo e o que propongo?
+/Ancora o cliente [nome] reclamou dos resultados dessa semana. O que ele disse: [resume a conversa]. Ele está em risco? Monta o plano para segurar.
 ```
 
 **Onboarding de cliente novo:**
 ```
-/Trilha cliente [nome] fechou gestão de tráfego. Monta sequência de onboarding com os documentos que preciso receber e o cronograma das primeiras 2 semanas.
+/Cais cliente [nome] fechou gestão de tráfego. Monta as boas-vindas, a lista de acessos e documentos que preciso receber e a reunião de largada.
+```
+
+**Mensalidade atrasada:**
+```
+/Regua o cliente [nome] está com a mensalidade de R$[X] atrasada há [N] dias. Monta a cobrança sem estragar a relação.
 ```
 
 **Contrato de prestação de serviços:**
@@ -117,14 +140,14 @@ Incluso: [o que você gerencia]
 
 ## Crescimento da agência com o FlowOS
 
-**Quando quiser escalar sem contratar:**
+**Vendendo automação além do tráfego** (Planta, pacote Clientes: ative com `/pacotes`):
 ```
-/Engrenagem quero atender mais clientes sem aumentar o time. Mapeie meu processo atual e mostre onde automatizar.
+/Planta o cliente [nome] quer automatizar o atendimento no WhatsApp. Me ajuda a levantar o processo dele e montar o escopo do projeto.
 ```
 
 **Criando material para captar novos clientes:**
 ```
-/Forja monta case de resultado de um cliente para usar como material de prospecção
+/Vitrine monta uma apresentação com o case de resultado do cliente [nome] para usar na prospecção. Dados: [o que foi feito e os números]
 ```
 
 **Alavancando conhecimento:**

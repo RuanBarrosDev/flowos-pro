@@ -1,0 +1,6 @@
+data,cliente,canal,tipo,nota,comentario
+# Exemplos abaixo (apague quando entrarem as respostas reais).
+# tipo = nps (0-10) | csat (1-5) | ces (1-7). nota = inteiro dentro da escala.
+# 2026-05-03,Maria Silva,whatsapp,nps,9,Atendimento rápido e resolveram tudo
+# 2026-05-04,João Souza,email,csat,2,Demorou demais pra responder meu pedido
+# 2026-05-05,,formulario,ces,6,Foi fácil agendar pelo site

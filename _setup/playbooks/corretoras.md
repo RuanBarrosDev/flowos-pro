@@ -1,14 +1,14 @@
-# Playbook FlowOS Pro — Corretores e Imobiliárias
+# Playbook FlowOS Pro para Corretores e Imobiliárias
 
-**Para:** Corretores de imóveis, seguros, planos de saúde e outros produtos financeiros.
+**Para:** corretores de imóveis, seguros, planos de saúde e outros produtos financeiros.
 
 ---
 
 ## Os 3 agentes que mudam o jogo para você primeiro
 
-### 1. Fisga — Abordagem que abre conversa sem parecer vendedor
+### 1. Fisga: abordagem que abre conversa sem parecer vendedor
 
-Corretor tem um estigma de "vai me empurrar coisa". A Fisga ajuda a construir uma abordagem consultiva que gera confiança antes de gerar venda.
+Corretor carrega o estigma do "vai me empurrar coisa". A Fisga ajuda a construir uma abordagem consultiva que gera confiança antes de gerar venda.
 
 **Abordagem para lead de imóvel:**
 ```
@@ -27,16 +27,16 @@ Corretor tem um estigma de "vai me empurrar coisa". A Fisga ajuda a construir um
 
 ---
 
-### 2. Balcão — Atendimento inicial rápido que não deixa lead esfriar
+### 2. Balcão: atendimento inicial rápido que não deixa lead esfriar
 
-Lead quente é o que responde em minutos. O Balcão garante que você nunca demora para dar o primeiro retorno.
+Lead quente é o que recebe resposta em minutos. O Balcão garante que você nunca demora para dar o primeiro retorno.
 
 **Resposta imediata para novo lead:**
 ```
 /Balcao cria mensagem de primeiro contato para lead que preencheu formulário de interesse em [produto]
 ```
 
-**Enviando proposta por WhatsApp:**
+**Acompanhando proposta por WhatsApp:**
 ```
 /Balcao cria mensagem de acompanhamento da proposta enviada ontem sem resposta
 ```
@@ -48,18 +48,26 @@ Lead quente é o que responde em minutos. O Balcão garante que você nunca demo
 
 ---
 
-### 3. Orq. Propostas — Proposta que justifica o valor e fecha negócio
+### 3. Amarra: proposta que mostra valor e fecha negócio
 
-Corretor que apresenta melhor ganha mais, mesmo cobrando o mesmo. A diferença está na qualidade da apresentação.
+(pacote Clientes: ative com `/pacotes`)
+
+Corretor que apresenta melhor ganha mais, mesmo cobrando o mesmo. A Amarra prepara a conversa de descoberta, anota o que o cliente quer nas palavras dele e monta a proposta com 3 opções. Ela não inventa valor nem condição: os números vêm de você.
+
+**Antes da visita ou da call:**
+```
+/Amarra vou atender um casal com filho pequeno que procura imóvel. Monta as perguntas para entender o que eles precisam e quem decide.
+```
 
 **Proposta de imóvel:**
 ```
-/orquestra-propostas monta proposta de apresentação do imóvel [endereço] para casal com filho pequeno que quer segurança e espaço
+/Amarra o casal disse que quer [segurança, espaço, perto da escola]. Orçamento deles: R$[X].
+Monta a proposta com 3 opções usando estes imóveis: [endereço e valor de cada um]
 ```
 
 **Proposta de seguro:**
 ```
-/orquestra-propostas monta comparativo dos planos de seguro [A, B, C] para cliente com [perfil] de forma que fique fácil de decidir
+/Amarra cliente com [perfil] quer seguro de [tipo]. Monta a proposta com 3 opções usando os planos [A, B, C] e os valores que cotei: [valores]. Quero que fique fácil de decidir.
 ```
 
 ---
@@ -71,6 +79,8 @@ Corretor que apresenta melhor ganha mais, mesmo cobrando o mesmo. A diferença e
 | Todo dia | Balcão + Fisga | Atendimento de novos leads e follow-up dos existentes |
 | Toda semana | Holofote | 1 post de autoridade no Instagram ou LinkedIn |
 | Toda semana | Escriba | Legenda para imóvel novo ou dica do mercado |
+| Por demanda | Amarra | Toda proposta para cliente interessado |
+| A cada negócio fechado | Aplauso | Pedir avaliação no Google para o cliente satisfeito |
 | Mensal | Farol | Análise de comissões e margem |
 | Mensal | Escuta | Resumo de calls e próximos passos com leads quentes |
 
@@ -78,9 +88,14 @@ Corretor que apresenta melhor ganha mais, mesmo cobrando o mesmo. A diferença e
 
 ## Exemplos práticos por situação
 
-**Reativando cliente que sumiu:**
+**Reativando lead que sumiu:**
 ```
 /Fisga o lead X pediu informação há 2 semanas e sumiu. Monta mensagem de reativação com novo ângulo
+```
+
+**Pedindo avaliação depois de fechar:**
+```
+/Aplauso acabei de entregar as chaves para a família [nome] e eles agradeceram muito. Como peço avaliação no Google?
 ```
 
 **Post de mercado imobiliário:**
@@ -95,7 +110,7 @@ Corretor que apresenta melhor ganha mais, mesmo cobrando o mesmo. A diferença e
 
 **Preparando apresentação para cliente importante:**
 ```
-/Forja monta material de apresentação da minha corretora para reunião com cliente de alto padrão
+/Vitrine monta a apresentação da minha corretora para reunião com cliente de alto padrão
 ```
 
 ---

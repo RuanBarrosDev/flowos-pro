@@ -1,22 +1,53 @@
-# Memória do negócio (criada pelo /instalar — privada, não versionar)
+# Memória do negócio (criada pelo /instalar; privada, não versionar)
 _memoria/negocio.md
 
-# Configs individuais dos agentes (dados do seu negócio)
+# Dados dos agentes do núcleo (dados do seu negócio)
 .balcao/
 .fisga/
 .farol/
 .leme/
 .escriba/
-.pauta/
 .holofote/
 .vitrine/
 .aplauso/
 .escuta/
 .alavanca/
-.forja/
-.trilha/
-.engrenagem/
 .orquestra/
+
+# Dados dos agentes dos pacotes
+.aceno/
+.alambique/
+.alfandega/
+.amarra/
+.ancora/
+.arcabouco/
+.cadencia/
+.cais/
+.claquete/
+.crivo/
+.emissario/
+.ensaio/
+.estaleiro/
+.estopim/
+.fisco/
+.fulcro/
+.gabarito/
+.garimpo/
+.maquete/
+.missiva/
+.mostruario/
+.novelo/
+.planta/
+.ponte/
+.prumo/
+.pulso/
+.rastro/
+.redea/
+.regua/
+.sextante/
+.tribuna/
+.turbina/
+.veredito/
 
 # OS
 .DS_Store

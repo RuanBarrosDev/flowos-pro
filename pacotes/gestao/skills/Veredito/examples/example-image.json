@@ -1,0 +1,15 @@
+{
+  "title": "Julgamento de Imagens",
+  "subtitle": "grade visual",
+  "batch": "exemplo-imagens",
+  "items": [
+    {
+      "id": "img01",
+      "kind": "image",
+      "src": "assets/thumb-exemplo.png",
+      "title": "Thumb conceito 01",
+      "caption": "Teste de leitura no feed",
+      "slug": "exemplo-c01"
+    }
+  ]
+}

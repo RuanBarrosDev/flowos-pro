@@ -40,7 +40,11 @@ Usuário tem um objetivo grande. Você:
 
 - "Preciso fechar o mês, preparar proposta pro cliente X e planejar o conteúdo de julho"
 - "Tenho reunião importante amanhã: quero onboarding do cliente novo, relatório do mês e script de apresentação"
-- "Acabei de fechar um cliente, o que faço agora?" (Trilha + Vitrine + Leme)
+- "Acabei de fechar um cliente, o que faço agora?" (Cais + Vitrine + Leme)
+
+## Quem está no time
+
+Os agentes ativos são as pastas em `.claude/skills/` e `.claude/agents/`. Os que estão guardados ficam em `pacotes/` (catálogo em `pacotes/README.md`). Se a melhor peça para uma subtarefa estiver num pacote desligado (por exemplo Amarra para proposta, Turbina para tráfego, Régua para cobrança), diga qual é e pergunte se pode ativar com `/pacotes` antes de seguir. Nunca finja que um agente desligado rodou.
 
 ## Como usar
 

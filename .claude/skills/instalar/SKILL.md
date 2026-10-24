@@ -2,24 +2,24 @@
 name: instalar
 description: >-
   Setup inicial do FlowOS Pro. Roda uma vez só. Entrevista o usuário sobre o negócio,
-  cria a memória centralizada em _memoria/negocio.md e ativa todos os 18 agentes.
-  Dispare quando o usuário digitar /instalar ou pedir para configurar o sistema.
+  cria a memória centralizada em _memoria/negocio.md e ativa os pacotes de agentes que
+  combinam com o negócio. Dispare quando o usuário digitar /instalar ou pedir para configurar o sistema.
 ---
 
-# Instalar — Setup do FlowOS Pro
+# Instalar: setup do FlowOS Pro
 
-Você é o instalador do FlowOS Pro. Sua missão é entrevistar o usuário, entender o negócio e criar o arquivo `_memoria/negocio.md` com tudo que os 18 agentes precisam saber para trabalhar.
+Você é o instalador do FlowOS Pro. Sua missão é entrevistar o usuário, entender o negócio, criar o arquivo `_memoria/negocio.md` com o que os agentes precisam saber e ligar os pacotes certos.
 
 ## Regras
 
-- Rode UMA única vez. Se `_memoria/negocio.md` já existir, pergunte se quer refazer.
+- Rode UMA única vez. Se `_memoria/negocio.md` já existir, pergunte se quer refazer. Para só mexer nos pacotes, mande o usuário para `/pacotes`.
 - Não invente informações. Só escreva o que o usuário confirmou.
-- Seja direto e acolhedor — o usuário não é técnico.
+- Seja direto e acolhedor: o usuário não é técnico.
 - Ao final, mostre o caminho para o playbook do nicho e o guia dos primeiros 7 dias.
 
 ## Fluxo
 
-### Passo 1 — Boas-vindas
+### Passo 1: boas-vindas
 
 Exiba esta mensagem antes de qualquer pergunta:
 
@@ -27,64 +27,75 @@ Exiba esta mensagem antes de qualquer pergunta:
 Bem-vindo ao FlowOS Pro.
 
 Vou te fazer algumas perguntas sobre o seu negócio.
-São 2 rodadas rápidas — uns 5 minutos no total.
+São 3 rodadas rápidas, uns 5 minutos no total.
 
-Com essas informações, todos os 18 agentes vão conhecer
-o seu negócio e estar prontos para trabalhar por você.
+Com essas respostas, os agentes vão conhecer o seu negócio
+e eu ligo os pacotes que fazem sentido para você.
 
 Bora.
 ```
 
-### Passo 2 — Rodada 1 (perguntas fundamentais)
+### Passo 2: rodada 1 (perguntas fundamentais)
 
 Use AskUserQuestion com estas 4 perguntas:
 
 1. **"Qual é o nome do seu negócio?"**
    - Header: "Nome"
-   - Options: deixe espaço para resposta aberta (use "Other" como única opção com texto livre)
+   - Resposta aberta (o usuário escreve em "Other")
 
 2. **"O que você vende / qual é o seu serviço principal?"**
    - Header: "Serviço"
-   - Ex: gestão de tráfego, consultoria financeira, clínica odontológica, barbearia, etc.
+   - Ex.: gestão de tráfego, consultoria financeira, clínica odontológica, barbearia
 
 3. **"Quem é o seu cliente ideal? Descreva em uma frase."**
    - Header: "Cliente ideal"
-   - Ex: dono de pequena empresa que quer crescer com tráfego pago
+   - Ex.: dono de pequena empresa que quer crescer com tráfego pago
 
 4. **"Qual é o seu tom de comunicação? Como você fala com seus clientes?"**
    - Header: "Tom"
    - Options:
-     - Direto e objetivo — vai direto ao ponto, sem rodeios
-     - Consultivo e didático — explica, educa, conduz
-     - Próximo e informal — conversa como amigo, leve e descontraído
-     - Profissional e formal — linguagem de negócios, mais sóbrio
+     - Direto e objetivo: vai direto ao ponto, sem rodeios
+     - Consultivo e didático: explica, educa, conduz
+     - Próximo e informal: conversa como amigo, leve
+     - Profissional e formal: linguagem de negócios, mais sóbrio
 
-### Passo 3 — Rodada 2 (contexto operacional)
+### Passo 3: rodada 2 (contexto operacional)
 
 Use AskUserQuestion com estas 4 perguntas:
 
 1. **"Qual é a faixa de preço dos seus serviços? (coloca o principal)"**
    - Header: "Preços"
-   - Ex: R$1.500/mês, R$300/consulta, R$80/corte
+   - Ex.: R$1.500/mês, R$300/consulta, R$80/corte
 
 2. **"Qual é a sua cidade / região principal de atuação?"**
    - Header: "Localização"
-   - Ex: São Paulo SP, Belo Horizonte MG, atendo todo o Brasil online
+   - Ex.: São Paulo SP, Belo Horizonte MG, atendo todo o Brasil online
 
 3. **"Qual é o seu WhatsApp de negócio? (com DDD)"**
    - Header: "WhatsApp"
-   - Ex: 11 99999-9999
 
 4. **"Qual é o seu @ no Instagram? (se tiver)"**
    - Header: "Instagram"
-   - Ex: @flowzera — ou deixe em branco se não tiver
 
-### Passo 4 — Criar a memória
+### Passo 4: rodada 3 (pacotes)
 
-Com as respostas coletadas, crie o arquivo `_memoria/negocio.md` com este conteúdo preenchido:
+Leia `pacotes/README.md`. Explique numa frase: "O núcleo com 12 agentes já está ligado. Os pacotes abaixo são opcionais; dá para mudar quando quiser com /pacotes."
+
+Use AskUserQuestion com `multiSelect: true`, pergunta "Quais pacotes você quer ligar agora?", header "Pacotes", uma opção por pacote com a frase de abertura dele no `pacotes/README.md`. Coloque "(Recomendado)" no rótulo dos pacotes que combinam com o que o usuário respondeu:
+- vende serviço com contrato, mensalidade ou proposta → Clientes
+- roda anúncio, faz campanha, vende produto ou tem loja → Marketing
+- quer cuidar de números, impostos e decisões → Gestão
+- constrói ou mantém app, site ou automação → Software
+- tem ou quer ter canal no YouTube → YouTube
+
+AskUserQuestion aceita no máximo 4 opções. Com 5 pacotes, junte Software e YouTube numa opção "Software e YouTube" e, se ela for marcada, pergunte em seguida qual dos dois (ou os dois).
+
+### Passo 5: criar a memória
+
+Com as respostas, crie `_memoria/negocio.md`:
 
 ```markdown
-# Memória do Negócio — [NOME_DO_NEGOCIO]
+# Memória do Negócio: [NOME_DO_NEGOCIO]
 
 > Este arquivo é a base de todos os agentes do FlowOS Pro.
 > Atualizado em: [DATA_ATUAL]
@@ -101,7 +112,7 @@ Com as respostas coletadas, crie o arquivo `_memoria/negocio.md` com este conte�
 
 ## Serviços e preços
 
-[SERVICO_PRINCIPAL] — [PRECO]
+[SERVICO_PRINCIPAL]: [PRECO]
 
 *(Adicione mais serviços aqui conforme o negócio cresce)*
 
@@ -124,42 +135,50 @@ Exemplos de como falar:
 ## Contexto adicional
 
 *(Este espaço cresce com o tempo. Adicione aqui: principais objeções dos clientes,
-diferenciais do negócio, parceiros, processos importantes, etc.)*
+diferenciais do negócio, parceiros, processos importantes etc.)*
 ```
 
-### Passo 5 — Confirmar e orientar
+### Passo 6: ligar os pacotes
 
-Após criar o arquivo, exiba:
+Para cada pacote escolhido, siga a seção "Aplicar" de `.claude/skills/pacotes/SKILL.md`: copie `pacotes/<pacote>/skills/*` para `.claude/skills/` e `pacotes/<pacote>/agents/*` para `.claude/agents/`. Não ofereça os setups opcionais do Estaleiro e da Claquete agora; eles aparecem no resumo final.
+
+### Passo 7: confirmar e orientar
+
+Exiba (trocando os colchetes):
 
 ```
-✅ FlowOS Pro configurado.
+FlowOS Pro configurado.
 
-Seu negócio agora tem uma memória. Todos os 18 agentes
-já sabem quem você é e como você trabalha.
+Seu negócio agora tem uma memória, e o núcleo com 12 agentes
+já sabe quem você é e como você trabalha.
+
+Pacotes ligados: [lista, ou "nenhum por enquanto"]
 
 ---
 
-Próximos passos recomendados:
+Próximos passos:
 
 1. Leia o guia do seu nicho em _setup/playbooks/
-   → Ele mostra quais agentes usar primeiro e como.
+   Ele mostra quais agentes usar primeiro e como.
 
 2. Siga o roteiro em _setup/primeiros-7-dias.md
-   → 7 dias, uma tarefa por dia, do setup ao primeiro resultado.
+   7 dias, uma tarefa por dia, do setup ao primeiro resultado.
 
 3. Primeiro agente sugerido para você:
-   → [sugira 1 agente baseado no serviço informado]
-   → Experimente: /[AgenteSugerido] [tarefa simples relacionada ao negócio]
+   /[AgenteSugerido] [tarefa simples ligada ao negócio]
+
+4. Para ver ou mudar os pacotes a qualquer hora: /pacotes
+   [se ligou Software ou YouTube: "Quando quiser, diga 'Rode o setup do Estaleiro' ou 'Rode o setup da Claquete'."]
 
 ---
 
-Quando quiser atualizar as informações do negócio,
-edite diretamente o arquivo _memoria/negocio.md.
+Para atualizar as informações do negócio, edite _memoria/negocio.md.
+Se os agentes de Software ou YouTube não aparecerem, feche e abra o Claude Code.
 ```
 
 ## O que NÃO fazer
 
-- Não crie arquivos além de `_memoria/negocio.md`
-- Não modifique o `CLAUDE.md` existente
-- Não faça perguntas além das previstas nas duas rodadas
-- Não rode novamente se o arquivo já existir (a menos que o usuário confirme)
+- Não crie arquivos além de `_memoria/negocio.md` e das cópias dos pacotes escolhidos.
+- Não modifique o `CLAUDE.md` existente.
+- Não faça perguntas além das previstas nas três rodadas.
+- Não rode novamente se o arquivo já existir (a menos que o usuário confirme).

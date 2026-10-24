@@ -1,0 +1,6 @@
+# Dados locais do dono (nunca versionar)
+.tribuna/
+
+# Python
+__pycache__/
+*.pyc

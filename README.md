@@ -2,29 +2,29 @@
 
 **O sistema operacional do seu negócio dentro do Claude Code.**
 
-Você acaba de instalar o FlowOS Pro. Em alguns minutos, seu negócio vai ter uma memória própria e 18 agentes especializados prontos para trabalhar por você — atendimento, financeiro, conteúdo, vendas e operacional.
+Em alguns minutos o seu negócio ganha uma memória própria, um núcleo de 12 agentes e um acervo de mais 43 em 5 pacotes: clientes, marketing, gestão, software e YouTube. Você liga só o que faz sentido para você.
 
-Você não precisa saber programar. Você precisa saber o que quer delegar.
+Você não precisa saber programar. Precisa saber o que quer delegar.
 
 ---
 
 ## Ligando o sistema
 
-Dois caminhos. Escolhe o que combina contigo.
+Dois caminhos. Escolha o que combina com você.
 
-### Caminho 1 — Pelo Claude (mais rápido)
+### Caminho 1: pelo Claude (mais rápido)
 
-Abre o Claude Code em qualquer pasta e cola o prompt abaixo:
+Abra o Claude Code em qualquer pasta e cole o prompt abaixo:
 
 ```
 Clona o https://github.com/RuanBarrosDev/flowos-pro.git na pasta atual, entra nela e roda o /instalar.
 ```
 
-Ele clona, entra na pasta e dispara a entrevista de setup. Você só responde.
+Ele clona, entra na pasta e começa a entrevista de setup. Você só responde.
 
-### Caminho 2 — Pelo terminal (mais previsível)
+### Caminho 2: pelo terminal (mais previsível)
 
-Cola estes comandos no terminal, um por vez:
+Cole estes comandos no terminal, um por vez:
 
 ```bash
 git clone https://github.com/RuanBarrosDev/flowos-pro.git
@@ -34,72 +34,58 @@ code .
 
 Na janela do VS Code que abrir:
 
-1. Abre o terminal integrado (`Ctrl + '` no Windows, `Cmd + '` no Mac)
-2. Digita `claude` e dá Enter
-3. Digita `/instalar` e dá Enter
+1. Abra o terminal integrado (`Ctrl + '` no Windows, `Cmd + '` no Mac)
+2. Digite `claude` e dê Enter
+3. Digite `/instalar` e dê Enter
 
 ### Depois que o /instalar terminar
 
-Renomeia a pasta `flowos-pro/` para o nome do seu negócio:
+Renomeie a pasta `flowos-pro/` para o nome do seu negócio:
 
-- Fecha o VS Code
-- Renomeia a pasta no Explorer (Windows) ou Finder (Mac)
-- Abre o VS Code de novo na pasta renomeada
+- Feche o VS Code
+- Renomeie a pasta no Explorer (Windows) ou no Finder (Mac)
+- Abra o VS Code de novo na pasta renomeada
 
-A pasta não fica como "flowos-pro" — ela é o teu negócio agora.
-
-O `/instalar` roda uma vez só. Te entrevista sobre o negócio, monta a memória e configura todos os agentes. Depois disso, é só usar.
+O `/instalar` roda uma vez só. Ele te entrevista sobre o negócio, monta a memória e pergunta quais pacotes ligar. Depois disso, é só usar.
 
 ---
 
-## O sistema
+## O núcleo (sempre ligado)
 
-### Clientes — nunca mais perde quem entrou em contato
 | Agente | O que faz | Exemplo |
 |--------|-----------|---------|
-| **Balcão** | Atendimento inbound no seu tom, 24/7 | `/Balcao Aqui a mensagem do WhatsApp, o que respondo?` |
-| **Fisga** | Prospecção e primeiro contato estratégico | `/Fisga pesquisa essa empresa e monta abordagem` |
-| **Aplauso** | Mais avaliações 5★ no Google | `/Aplauso o cliente X elogiou, o que faço?` |
-| **Escuta** | Resumo de calls e follow-up automático | `/Escuta aqui o que aconteceu na reunião de hoje` |
+| **Balcão** | Atendimento no seu tom | `/Balcao Aqui a mensagem do WhatsApp, o que respondo?` |
+| **Fisga** | Prospecção e primeiro contato | `/Fisga pesquisa essa empresa e monta abordagem` |
+| **Aplauso** | Avaliações e reputação no Google | `/Aplauso o cliente X elogiou, o que faço?` |
+| **Escuta** | Resumo de reunião e follow-up | `/Escuta aqui o que aconteceu na reunião de hoje` |
+| **Farol** | Fecha o mês e mostra onde está o dinheiro | `/Farol aqui as entradas e saídas de junho` |
+| **Leme** | As 3 prioridades do dia | `/Leme aqui tudo que tenho pra fazer, por onde começo?` |
+| **Escriba** | Posts e textos no seu tom | `/Escriba escreve 3 legendas pra esse produto` |
+| **Holofote** | Calendário de conteúdo e autoridade | `/Holofote monta o calendário do mês` |
+| **Vitrine** | Relatórios e apresentações | `/Vitrine monta relatório de resultados pro cliente X` |
+| **Alavanca** | Conhecimento vira produto digital | `/Alavanca como transformo o que eu sei em curso?` |
+| **Orq. Documentos** | Contratos e documentos | `/orquestra-documentos contrato de prestação de serviços` |
+| **Maestro** | Coordena os outros agentes | `/orquestra-maestro preciso fechar o mês e preparar proposta` |
 
-### Financeiro — sabe onde está o dinheiro
-| Agente | O que faz | Exemplo |
-|--------|-----------|---------|
-| **Farol** | Mini-CFO: fecha o mês em 15 minutos | `/Farol aqui as entradas e saídas de junho` |
-| **Leme** | Top 3 prioridades do dia | `/Leme aqui tudo que tenho pra fazer, por onde começo?` |
-| **Engrenagem** | Mapeia e melhora processos | `/Engrenagem esse processo tá quebrando, me ajuda` |
+## Os pacotes (você escolhe)
 
-### Conteúdo — para de perder domingo escrevendo
-| Agente | O que faz | Exemplo |
-|--------|-----------|---------|
-| **Escriba** | Posts e textos no seu tom em minutos | `/Escriba escreve 3 legendas pra esse produto` |
-| **Pauta** | 30 dias de conteúdo planejado | `/Pauta monta o calendário de julho` |
-| **Holofote** | Posicionamento e autoridade no nicho | `/Holofote quero aparecer mais no LinkedIn` |
-| **Vitrine** | Relatórios e apresentações profissionais | `/Vitrine monta relatório de resultados pro cliente X` |
+| Pacote | O que tem |
+|---|---|
+| **Clientes** (11) | Cais, Amarra, Planta, Sextante, Âncora, Pulso, Aceno, Cadência, Régua, Emissário, Rédea |
+| **Marketing** (6) | Turbina, Estopim, Ponte, Missiva, Mostruário, Alfândega |
+| **Gestão** (7) | Fisco, Fulcro, Garimpo, Alambique, Tribuna, Maquete, Veredito |
+| **Software** (13) | Gabarito, Arcabouço, Prumo, Crivo, Rastro, Ensaio, Vigia, Novelo + 5 agentes Estaleiro |
+| **YouTube** (6) | Agentes Claquete: pauta, roteiro, thumbnail, SEO, publicação e análise |
 
-### Crescimento — estrutura para escalar
-| Agente | O que faz | Exemplo |
-|--------|-----------|---------|
-| **Alavanca** | Transforma conhecimento em produto | `/Alavanca como transformo meu conhecimento em curso?` |
-| **Forja** | Materiais comerciais prontos na hora | `/Forja preciso de um one-pager pra reunião amanhã` |
-| **Orq. Propostas** | Proposta completa em minutos | `/orquestra-propostas monta proposta pro cliente Y` |
-| **Orq. Tráfego** | Estrutura campanhas com estratégia real | `/orquestra-trafego campanha de leads pra clínica` |
-
-### Operacional — a retaguarda do negócio
-| Agente | O que faz | Exemplo |
-|--------|-----------|---------|
-| **Orq. Conteúdo** | Volume de conteúdo sem perder o tom | `/orquestra-conteudo 10 posts sobre gestão financeira` |
-| **Orq. Documentos** | Contratos e documentos profissionais | `/orquestra-documentos contrato de prestação de serviços` |
-| **Trilha** | Onboarding de clientes impecável | `/Trilha o cliente X fechou, monta o onboarding` |
-| **Maestro** | Coordena todos os agentes | `/orquestra-maestro preciso fechar o mês e preparar proposta` |
+O que cada um faz está em [`pacotes/README.md`](pacotes/README.md). Para ligar ou desligar a qualquer hora: `/pacotes`.
 
 ---
 
 ## A tese
 
-IA não é uma ferramenta que sua empresa usa. É o sistema operacional em que ela roda.
+IA não é uma ferramenta que a sua empresa usa. É o sistema operacional em que ela roda.
 
-A diferença não é velocidade. É capacidade nova — uma pessoa com o FlowOS faz o que antes exigia um time inteiro. Atendimento, financeiro, conteúdo e operacional deixam de ser gargalos e passam a ser delegados.
+A diferença não é só velocidade, é capacidade nova: uma pessoa com o FlowOS faz o que antes pedia um time. Atendimento, financeiro, conteúdo e operação deixam de ser gargalo e passam a ser delegados.
 
 O sistema não substitui você. Ele vira parte do seu negócio.
 
@@ -107,16 +93,18 @@ O sistema não substitui você. Ele vira parte do seu negócio.
 
 ## Como o FlowOS pensa
 
-`_memoria/negocio.md` é o cérebro. Tudo que importa do seu negócio mora aqui — quem você é, o que você vende, quem é o seu cliente, como você fala. O Claude lê isso antes de cada resposta. Quanto melhor a memória, melhor o sistema.
+`_memoria/negocio.md` é o cérebro. Tudo que importa do seu negócio mora ali: quem você é, o que vende, quem é o seu cliente, como você fala. O Claude lê isso antes de cada resposta. Quanto melhor a memória, melhor o sistema.
 
-`_setup/` tem os guias. Instalação passo a passo e roteiro dos primeiros 7 dias.
+`.claude/skills/` tem os agentes ligados. `pacotes/` tem os guardados.
 
-`_setup/playbooks/` tem os guias de nicho. Encontra o seu segmento e começa por ele.
-
-`.claude/skills/` tem os agentes. São 18 especializados no seu negócio.
+`_setup/` tem os guias: instalação passo a passo e o roteiro dos primeiros 7 dias. Em `_setup/playbooks/` estão os guias por nicho.
 
 ---
 
+## Créditos
+
+Os agentes dos pacotes são da Maestria Academy, sob licença MIT. Veja [`CREDITOS.md`](CREDITOS.md).
+
 ## Quando precisar
 
-[flowzera.com](https://flowzera.com) · ruan@flowzera.com · [@flowzera](https://instagram.com/flowzera)
+[flowzhub.com/flowos](https://flowzhub.com/flowos) · ruan@flowzera.com · [@barrosruan_](https://instagram.com/barrosruan_)

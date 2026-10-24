@@ -1,0 +1,14 @@
+{
+  "title": "Julgamento de Ideias",
+  "subtitle": "texto longo em markdown",
+  "batch": "exemplo-markdown",
+  "items": [
+    {
+      "id": "idea01",
+      "kind": "markdown",
+      "name": "Ideia de produto · Maestria Copilot",
+      "fonte": "Roadmap",
+      "text": "**Maestria Copilot** é um assistente que vive dentro da comunidade e responde qualquer dúvida do aluno usando *só* o material das 10 semanas — nunca inventa, sempre cita a aula de origem.\n\nO diferencial é o **modo prática**:\n\n- propõe o próximo exercício com base em onde o aluno parou\n- revisa o resultado e aponta o erro\n- roda no `claude-opus` com o currículo cacheado\n\nCusto marginal perto de zero."
+    }
+  ]
+}

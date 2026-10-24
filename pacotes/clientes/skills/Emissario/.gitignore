@@ -1,0 +1,7 @@
+# Dados locais do Emissário (assistente, base, fluxos e config do dono) — nunca versionar
+.emissario/
+
+# Ruído do sistema / Python
+__pycache__/
+*.pyc
+.DS_Store

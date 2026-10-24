@@ -1,0 +1,20 @@
+{
+  "title": "Julgamento de Mudanças",
+  "subtitle": "diffs de código",
+  "batch": "exemplo-diff",
+  "items": [
+    {
+      "id": "chg01",
+      "kind": "diff",
+      "title": "PIX vira o método padrão no checkout",
+      "file": "src/checkout/PixButton.tsx",
+      "lines": [
+        {"k": " ", "t": "export function Checkout({ cart }) {"},
+        {"k": "-", "t": "  const method = 'credit_card';"},
+        {"k": "+", "t": "  const method = 'pix';"},
+        {"k": " ", "t": "  return <PayButton method={method} />"},
+        {"k": " ", "t": "}"}
+      ]
+    }
+  ]
+}

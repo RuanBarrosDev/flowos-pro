@@ -1,33 +1,33 @@
-# Playbook FlowOS Pro — Barbearias e Salões
+# Playbook FlowOS Pro para Barbearias e Salões
 
-**Para:** Barbearias, salões de beleza, estúdios de estética e serviços de beleza em geral.
+**Para:** barbearias, salões de beleza, estúdios de estética e serviços de beleza em geral.
 
 ---
 
 ## Os 3 agentes que mudam o jogo para você primeiro
 
-### 1. Balcão — Confirmação de horário e atendimento que não interrompe o corte
+### 1. Balcão: confirmação de horário e atendimento que não interrompe o corte
 
 O maior problema de barbearia é o celular tocando enquanto você está com cliente. O Balcão resolve o atendimento assíncrono para você.
 
-**Use assim — confirmação de agendamento:**
+**Use assim, confirmação de agendamento:**
 ```
 /Balcao cria mensagem de confirmação de agendamento para enviar 1 dia antes. Cliente: João, horário: amanhã às 14h, serviço: corte + barba
 ```
 
-**Use assim — cliente perguntando sobre preço:**
+**Use assim, cliente perguntando sobre preço:**
 ```
 /Balcao aqui a mensagem: "Oi, qual o preço do corte com degradê?"
 ```
 
-**Criando FAQ automático:**
+**Criando respostas padrão:**
 ```
 /Balcao cria respostas padrão para: preços, horários de atendimento, como agendar, formas de pagamento
 ```
 
 ---
 
-### 2. Aplauso — Google cheio de avaliações 5★ atrai cliente sem pagar por isso
+### 2. Aplauso: Google cheio de avaliações 5★ atrai cliente sem pagar por isso
 
 Barbearia é negócio local. No Google, 10 avaliações a mais do que o concorrente podem dobrar o número de clientes orgânicos.
 
@@ -48,9 +48,9 @@ Barbearia é negócio local. No Google, 10 avaliações a mais do que o concorre
 
 ---
 
-### 3. Holofote + Escriba — Instagram que atrai cliente, não só enfeita o feed
+### 3. Holofote + Escriba: Instagram que atrai cliente, não só enfeita o feed
 
-Barbearia tem ótimo material visual — o problema é que ninguém sabe o que escrever. O Escriba resolve o texto, o Holofote resolve o posicionamento.
+Barbearia tem ótimo material visual. O problema é que ninguém sabe o que escrever. O Escriba resolve o texto, o Holofote resolve o posicionamento e o calendário.
 
 **Post de bastidor (funciona muito bem em barbearia):**
 ```
@@ -72,6 +72,7 @@ Barbearia tem ótimo material visual — o problema é que ninguém sabe o que e
 | Toda semana | Aplauso | Pedir avaliação de 3 clientes satisfeitos |
 | 3x por semana | Escriba | Post Instagram (antes/depois, dica, bastidor) |
 | Quinzenal | Fisga | Abordagem para empresa local (convênio corporativo) |
+| Mensal | Aceno (pacote Clientes) | Chamar de volta quem não aparece há um tempo |
 | Mensal | Farol | Fechamento do mês, margem por serviço |
 
 ---
@@ -85,7 +86,7 @@ Barbearia tem ótimo material visual — o problema é que ninguém sabe o que e
 
 **Lançando pacote novo:**
 ```
-/Escriba escreve post lançando o pacote mensal [nome]: corte + barba por R$[X]. Destaca o custo-benefício vs pagar por vez
+/Escriba escreve post lançando o pacote mensal [nome]: corte + barba por R$[X]. Destaca a economia em relação a pagar por vez
 ```
 
 **Captando empresas da região:**
@@ -100,13 +101,29 @@ Barbearia tem ótimo material visual — o problema é que ninguém sabe o que e
 
 ---
 
+## Pacote Clientes: trazer de volta e medir satisfação
+
+Barbearia vive de cliente que volta. Dois agentes do pacote Clientes (ative com `/pacotes`) ajudam nisso.
+
+**Aceno, para quem sumiu:**
+```
+/Aceno aqui a lista de clientes que não cortam aqui há mais de 2 meses: [nomes e último serviço]. Quem chamo primeiro e o que mando?
+```
+
+**Pulso, para saber se o cliente está satisfeito:**
+```
+/Pulso quero medir a satisfação dos clientes da barbearia. Monta uma pergunta curta para mandar depois do corte e me ajuda a ler as respostas.
+```
+
+---
+
 ## Expansão: quando o negócio crescer
 
-Com o FlowOS funcionando na rotina básica, próximo passo é:
+Com o FlowOS funcionando na rotina básica, o próximo passo é:
 
-1. **Alavanca** — Criar um curso ou mentoria para barbeiros iniciantes
-2. **Orq. Tráfego** — Campanha de Meta Ads para atrair clientes novos por geolocalização
-3. **Forja** — Material comercial para fechar convênio com empresas
+1. **Alavanca:** criar um curso ou mentoria para barbeiros iniciantes
+2. **Turbina** (pacote Marketing: ative com `/pacotes`): planejar a campanha de Meta Ads para atrair clientes novos da região, com a verba certa
+3. **Vitrine:** apresentação comercial para fechar convênio com empresas
 
 ---
 

@@ -1,0 +1,22 @@
+{
+  "title": "Julgamento de Texto",
+  "subtitle": "títulos e CTAs",
+  "batch": "exemplo-texto",
+  "items": [
+    {
+      "id": "t01",
+      "kind": "text",
+      "text": "Eu Testei 7 IAs por 30 Dias — Só Uma Prestou",
+      "fonte": "YouTube A/B",
+      "angulo": "prova pessoal"
+    },
+    {
+      "id": "t02",
+      "kind": "text",
+      "subkind": "cta",
+      "text": "Comece agora — os 30 primeiros ganham 1 mês de mentoria em grupo, sem custo.",
+      "fonte": "Landing hero",
+      "angulo": "escassez + bônus"
+    }
+  ]
+}

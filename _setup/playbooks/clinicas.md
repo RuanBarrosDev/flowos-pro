@@ -1,12 +1,12 @@
-# Playbook FlowOS Pro — Clínicas e Consultórios
+# Playbook FlowOS Pro para Clínicas e Consultórios
 
-**Para:** Clínicas odontológicas, médicas, psicológicas, fisioterapia, nutrição, estética e saúde em geral.
+**Para:** clínicas odontológicas, médicas, psicológicas, fisioterapia, nutrição, estética e saúde em geral.
 
 ---
 
 ## Os 3 agentes que mudam o jogo para você primeiro
 
-### 1. Balcão — Nunca perde agendamento por demora no atendimento
+### 1. Balcão: nunca perde agendamento por demora no atendimento
 
 Clínicas perdem pacientes porque a secretária não consegue responder tudo ao mesmo tempo. O Balcão resolve isso.
 
@@ -15,7 +15,7 @@ Clínicas perdem pacientes porque a secretária não consegue responder tudo ao 
 /Balcao aqui a mensagem que recebi no WhatsApp: "Olá, gostaria de agendar uma consulta de avaliação, vocês têm disponibilidade essa semana?"
 ```
 
-**Resultado:** Resposta profissional com as informações da clínica, opções de horário e confirmação do próximo passo — em segundos.
+**Resultado:** resposta profissional com as informações da clínica, opções de horário e confirmação do próximo passo. Em segundos.
 
 **Criando respostas padrão:**
 ```
@@ -24,7 +24,7 @@ Clínicas perdem pacientes porque a secretária não consegue responder tudo ao 
 
 ---
 
-### 2. Aplauso — Mais avaliações 5★ no Google sem constrangimento
+### 2. Aplauso: mais avaliações 5★ no Google sem constrangimento
 
 Paciente satisfeito raramente deixa avaliação sem ser pedido. O Aplauso te ajuda a pedir no momento certo, do jeito certo.
 
@@ -38,13 +38,13 @@ Paciente satisfeito raramente deixa avaliação sem ser pedido. O Aplauso te aju
 /Aplauso a paciente Maria acabou de terminar o tratamento e disse que ficou muito feliz com o resultado. Como peço avaliação?
 ```
 
-**Impacto real:** Uma avaliação nova no Google pode trazer 3-5 pacientes novos por mês que buscam a especialidade na região.
+**Impacto real:** uma avaliação nova no Google pode trazer 3-5 pacientes novos por mês que buscam a especialidade na região.
 
 ---
 
-### 3. Fisga — Novos pacientes, não só os que já te conhecem
+### 3. Fisga: novos pacientes, não só os que já te conhecem
 
-Clínicas dependem muito de indicação. O Fisga abre novos canais — outros médicos, empresas da região, parcerias.
+Clínicas dependem muito de indicação. O Fisga abre novos canais: outros médicos, empresas da região, parcerias.
 
 **Abordagem para médico de outra especialidade:**
 ```
@@ -66,8 +66,11 @@ Clínicas dependem muito de indicação. O Fisga abre novos canais — outros m�
 | Toda semana | Aplauso | Pedir avaliação de 2-3 pacientes satisfeitos |
 | Toda semana | Escriba | 2 posts para Instagram (dica de saúde + bastidor da clínica) |
 | Quinzenal | Fisga | 1 nova abordagem de parceria ou captação |
+| Mensal | Pulso (pacote Clientes) | Pesquisa de satisfação com quem foi atendido no mês |
 | Mensal | Farol | Fechamento financeiro do mês |
 | Mensal | Vitrine | Relatório de resultados (se tiver sócios ou equipe) |
+
+Pulso, Aceno e Cais ficam no pacote Clientes. Se não ativou no `/instalar`, roda `/pacotes` e liga ele.
 
 ---
 
@@ -90,7 +93,17 @@ Clínicas dependem muito de indicação. O Fisga abre novos canais — outros m�
 
 **Onboarding de paciente novo:**
 ```
-/Trilha paciente novo vai começar tratamento de [procedimento]. Monta sequência de boas-vindas.
+/Cais paciente novo vai começar tratamento de [procedimento]. Monta as boas-vindas e a lista do que preciso receber dele antes da primeira sessão.
+```
+
+**Medindo a satisfação dos pacientes:**
+```
+/Pulso aqui as notas que os pacientes deram de 0 a 10 esse mês: [lista]. Qual o NPS e quem eu preciso procurar?
+```
+
+**Paciente que não voltou mais:**
+```
+/Aceno aqui os pacientes que não voltam há mais de 6 meses: [nomes e último atendimento]. Quem chamo primeiro e o que escrevo?
 ```
 
 ---
@@ -98,7 +111,7 @@ Clínicas dependem muito de indicação. O Fisga abre novos canais — outros m�
 ## O que o FlowOS não faz por você
 
 - Não agenda consultas automaticamente (ainda exige sistema próprio de agenda)
-- Não substitui a triagem médica — o diagnóstico é sempre seu
+- Não substitui a triagem médica: o diagnóstico é sempre seu
 - Não gerencia o prontuário do paciente
 
 ---

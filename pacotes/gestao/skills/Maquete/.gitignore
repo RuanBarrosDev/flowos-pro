@@ -1,0 +1,5 @@
+# Maquete — dados locais do design (fluxos, telas, protótipos). Nunca versionar.
+.maquete/
+scripts/__pycache__/
+setup/__pycache__/
+*.pyc

@@ -1,0 +1,74 @@
+{
+  "title": "veredito · lote misto",
+  "subtitle": "um item de cada kind",
+  "batch": "exemplo-misto",
+  "round": 1,
+  "items": [
+    {
+      "id": "m1-image",
+      "kind": "image",
+      "src": "assets/thumb-exemplo.png",
+      "title": "Thumb conceito (image)",
+      "caption": "kind=image"
+    },
+    {
+      "id": "m2-text",
+      "kind": "text",
+      "text": "O Prompt Que a OpenAI Não Quer Que Você Use",
+      "fonte": "Brainstorm",
+      "angulo": "curiosidade"
+    },
+    {
+      "id": "m3-cta",
+      "kind": "text",
+      "subkind": "cta",
+      "text": "Entre hoje e destrave a mentoria ao vivo desta semana.",
+      "fonte": "Hero",
+      "angulo": "urgência"
+    },
+    {
+      "id": "m4-markdown",
+      "kind": "markdown",
+      "name": "Ideia · Copilot da comunidade",
+      "text": "Assistente que responde **só** com o material das 10 semanas.\n\n- cita a aula de origem\n- propõe o próximo exercício\n- roda no `claude-opus`"
+    },
+    {
+      "id": "m5-diff",
+      "kind": "diff",
+      "title": "Atraso de 5 min antes do 1º DM",
+      "file": "manychat/flows/welcome.json",
+      "lines": [
+        {"k": " ", "t": "  \"trigger\": \"new_subscriber\","},
+        {"k": "-", "t": "  \"delay_seconds\": 0,"},
+        {"k": "+", "t": "  \"delay_seconds\": 300,"},
+        {"k": " ", "t": "  \"action\": \"send_first_dm\""}
+      ]
+    },
+    {
+      "id": "m6-change_card",
+      "kind": "change_card",
+      "title": "Remover o campo 'empresa' do formulário de lead",
+      "area": "Captação",
+      "what": "Tirar o campo obrigatório 'empresa' do opt-in, deixando só nome, e-mail e WhatsApp.",
+      "why": "18% dos abandonos do form acontecem nele segundo o PostHog.",
+      "risk": "baixo — só remove atrito",
+      "level": "baixo"
+    },
+    {
+      "id": "m7-url",
+      "kind": "url",
+      "url": "https://exemplo.com/pagina",
+      "domain": "exemplo.com",
+      "title": "Página capturada (url + screenshot)",
+      "desc": "Screenshot embutido em base64.",
+      "screenshot": "assets/screenshot-exemplo.png"
+    },
+    {
+      "id": "m8-code",
+      "kind": "code",
+      "title": "Handler do webhook order.paid",
+      "lang": "python",
+      "code": "def on_order_paid(event):\n    order = event[\"data\"][\"order\"]\n    grant_access(order[\"customer\"][\"email\"])\n    return {\"ok\": True}"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "projeto": "CRM de vendas",
+  "engine": "sqlite",
+  "tabelas": [
+    {
+      "nome": "clientes",
+      "descricao": "Cada pessoa ou empresa que você atende ou quer atender",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true, "descricao": "identificador"},
+        {"nome": "nome", "tipo": "texto", "nn": true, "descricao": "nome ou razão social"},
+        {"nome": "email", "tipo": "texto", "descricao": "e-mail principal"},
+        {"nome": "telefone", "tipo": "texto", "descricao": "telefone/WhatsApp"},
+        {"nome": "origem", "tipo": "opcao", "opcoes": ["indicacao", "instagram", "google", "evento", "outro"], "descricao": "de onde veio"},
+        {"nome": "criado_em", "tipo": "datahora", "nn": true, "default": "agora", "descricao": "quando entrou na base"}
+      ]
+    },
+    {
+      "nome": "oportunidades",
+      "descricao": "Cada negócio em aberto com um cliente (o funil de vendas)",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "cliente_id", "tipo": "ref", "ref": "clientes.id", "nn": true, "ao_apagar": "cascata", "rotulo": "tem", "descricao": "de quem é a oportunidade"},
+        {"nome": "titulo", "tipo": "texto", "nn": true, "descricao": "o que está sendo vendido"},
+        {"nome": "valor", "tipo": "dinheiro", "descricao": "valor estimado do negócio"},
+        {"nome": "etapa", "tipo": "opcao", "opcoes": ["novo", "contato", "proposta", "negociacao", "ganho", "perdido"], "nn": true, "default": "novo", "descricao": "em que ponto do funil está"},
+        {"nome": "fechamento_previsto", "tipo": "data", "descricao": "quando deve fechar"},
+        {"nome": "criado_em", "tipo": "datahora", "nn": true, "default": "agora"}
+      ]
+    },
+    {
+      "nome": "interacoes",
+      "descricao": "Cada contato feito com o cliente (ligação, reunião, mensagem)",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "oportunidade_id", "tipo": "ref", "ref": "oportunidades.id", "nn": true, "ao_apagar": "cascata", "rotulo": "registra"},
+        {"nome": "tipo", "tipo": "opcao", "opcoes": ["ligacao", "reuniao", "email", "whatsapp"], "nn": true, "descricao": "canal do contato"},
+        {"nome": "resumo", "tipo": "texto_longo", "descricao": "o que foi conversado"},
+        {"nome": "quando", "tipo": "datahora", "nn": true, "default": "agora", "descricao": "data e hora do contato"}
+      ]
+    }
+  ]
+}

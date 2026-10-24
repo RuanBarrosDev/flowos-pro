@@ -1,0 +1,27 @@
+{
+  "title": "Julgamento de Mudanças",
+  "subtitle": "cards de mudança",
+  "batch": "exemplo-change-card",
+  "items": [
+    {
+      "id": "chg01",
+      "kind": "change_card",
+      "title": "Trocar o VSL de 12 min por um de 90s",
+      "area": "Landing / vendas",
+      "what": "Substituir o vídeo de vendas longo do topo da página por um corte de 90 segundos com a mesma promessa.",
+      "why": "Bounce alto antes dos 2 min; a hipótese é que o vídeo longo afasta o tráfego frio antes de ver a oferta.",
+      "risk": "médio — pode reduzir profundidade de convencimento",
+      "level": "medio"
+    },
+    {
+      "id": "chg02",
+      "kind": "change_card",
+      "title": "Garantia incondicional de 7 dias no checkout",
+      "area": "Oferta / checkout",
+      "what": "Adicionar selo e cláusula de reembolso total em 7 dias, sem perguntas, na página de pagamento.",
+      "why": "Reduz risco percebido na compra por impulso; padrão dos concorrentes diretos.",
+      "risk": "alto — mexe em política de reembolso e no financeiro",
+      "level": "alto"
+    }
+  ]
+}

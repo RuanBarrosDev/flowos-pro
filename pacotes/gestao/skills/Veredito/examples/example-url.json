@@ -1,0 +1,24 @@
+{
+  "title": "Julgamento de URLs",
+  "subtitle": "screenshots de página",
+  "batch": "exemplo-url",
+  "items": [
+    {
+      "id": "url01",
+      "kind": "url",
+      "url": "https://exemplo.com/pagina",
+      "domain": "exemplo.com",
+      "title": "Página de exemplo capturada",
+      "desc": "Este item traz um screenshot já capturado (campo screenshot -> embutido como base64 pelo build_panel).",
+      "screenshot": "assets/screenshot-exemplo.png"
+    },
+    {
+      "id": "url02",
+      "kind": "url",
+      "url": "https://www.wikipedia.org/",
+      "domain": "wikipedia.org",
+      "title": "Wikipédia (sem screenshot)",
+      "desc": "Sem captura: o motor renderiza um card de link com botão 'Abrir em nova aba'."
+    }
+  ]
+}

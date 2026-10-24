@@ -1,0 +1,48 @@
+{
+  "projeto": "Loja / e-commerce",
+  "engine": "sqlite",
+  "tabelas": [
+    {
+      "nome": "clientes",
+      "descricao": "Quem compra na loja",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "nome", "tipo": "texto", "nn": true},
+        {"nome": "email", "tipo": "texto", "unico": true, "nn": true, "descricao": "e-mail (login, não repete)"},
+        {"nome": "criado_em", "tipo": "datahora", "nn": true, "default": "agora"}
+      ]
+    },
+    {
+      "nome": "produtos",
+      "descricao": "O que a loja vende",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "nome", "tipo": "texto", "nn": true, "descricao": "nome do produto"},
+        {"nome": "preco", "tipo": "dinheiro", "nn": true, "descricao": "preço de venda"},
+        {"nome": "estoque", "tipo": "numero", "nn": true, "default": 0, "descricao": "quantidade disponível"},
+        {"nome": "ativo", "tipo": "booleano", "nn": true, "default": 1, "descricao": "aparece na loja?"}
+      ]
+    },
+    {
+      "nome": "pedidos",
+      "descricao": "Cada compra feita por um cliente",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "cliente_id", "tipo": "ref", "ref": "clientes.id", "nn": true, "rotulo": "faz"},
+        {"nome": "status", "tipo": "opcao", "opcoes": ["carrinho", "pago", "enviado", "entregue", "cancelado"], "nn": true, "default": "carrinho", "descricao": "situação do pedido"},
+        {"nome": "criado_em", "tipo": "datahora", "nn": true, "default": "agora"}
+      ]
+    },
+    {
+      "nome": "itens_pedido",
+      "descricao": "Tabela do meio: quais produtos, e quantos, entraram em cada pedido (muitos-para-muitos entre pedidos e produtos)",
+      "colunas": [
+        {"nome": "id", "tipo": "id", "pk": true},
+        {"nome": "pedido_id", "tipo": "ref", "ref": "pedidos.id", "nn": true, "ao_apagar": "cascata", "rotulo": "contém"},
+        {"nome": "produto_id", "tipo": "ref", "ref": "produtos.id", "nn": true, "rotulo": "é"},
+        {"nome": "quantidade", "tipo": "numero", "nn": true, "default": 1, "descricao": "quantas unidades"},
+        {"nome": "preco_unitario", "tipo": "dinheiro", "nn": true, "descricao": "preço no momento da compra (congela o valor)"}
+      ]
+    }
+  ]
+}

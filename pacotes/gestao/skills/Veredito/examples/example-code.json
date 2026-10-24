@@ -1,0 +1,14 @@
+{
+  "title": "Julgamento de Código",
+  "subtitle": "trechos para aprovar",
+  "batch": "exemplo-code",
+  "items": [
+    {
+      "id": "code01",
+      "kind": "code",
+      "title": "Handler do webhook order.paid",
+      "lang": "python",
+      "code": "def on_order_paid(event):\n    order = event[\"data\"][\"order\"]\n    grant_access(order[\"customer\"][\"email\"])\n    log.info(\"acesso liberado: %s\", order[\"id\"])\n    return {\"ok\": True}"
+    }
+  ]
+}
